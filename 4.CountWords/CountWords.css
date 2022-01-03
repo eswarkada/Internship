@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(62, 219, 219);
+}
+#divText1{
+    border: 2px solid black;
+}
+#textArea1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: rgb(221, 226, 235);
+    border: 3px solid red;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+#divElement1{
+    margin-top: 30px;
+    border: 2px solid black;
+    padding-bottom: 30px;
+}
+#div1{
+    margin-top: 30px;
+}
+.label1{
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: navy;
+}
+#totalWords,#totalCSWords,#totalUCWords,#totalLCWords,#totalCWords{
+    font-size: 30px;
+    color: orangered;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#FirstLastOcc{
+    width: 300px;
+    height: 30px;
+}
+.l1{
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: navy;
+}
+#firstOcc , #lastOcc{
+    font-size: 25px;
+    color: orangered;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
