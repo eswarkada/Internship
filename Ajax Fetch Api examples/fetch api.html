@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch details</title>
+    <style>
+        #users{
+            border: 2px solid black;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Authors</h1>
+    <table id="users"></table>
+    <script>
+       // const ul = document.getElementById('authors');
+     //   const list = document.createDocumentFragment();
+
+        const url = 'https://jsonplaceholder.typicode.com/users';
+        fetch(url)
+          .then((response) => {
+              return response.json();
+            })
+          .then((data) => {
+              console.log(data);
+              let authors = data;
+              let table = `<tr><th>Name</th><th>Email</th></tr>`;
+              for(let r of authors){
+                  table += `<tr><td>${r.name}</td><td>${r.email}</td></tr>`;
+              }
+              document.getElementById('users').innerHTML = table;
+              })
+            .catch(function(error){
+                console.log(error);
+            });
+
+          //  ul.appendChild(list);
+    </script>
+    
+</body>
+</html>
