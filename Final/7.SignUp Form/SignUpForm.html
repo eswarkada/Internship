@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Form</title>
+    <script src="SignUpForm.js"></script>
+</head>
+<body>
+    <form name="f">
+        <label>First Name : </label>
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        <input type="text" name="fname" id="fName" oninput="onlyAlphabets1()">
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        <label id="find"></label>
+        <br>
+        <label>Last Name : </label>
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        <input type="text" name="lname" id="lName" oninput="onlyAlphabets2()">
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        <label id="lind"></label>
+        <br>
+        <label>Email : </label>
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        <input type="email" name="email" id="eMail" oninput="emailValidation()">
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        <label id="eind"></label>
+        <br>
+        <label>Mobile No : </label>
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        <input type="number" name="mnum" id="mNum" minlength="10" maxlength="10" oninput="mobileValidation()">
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        <label id="mind"></label>
+        <br>
+        <label>Password : </label>
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        <input type="password" name="paswd1" id="pswd1" minlength="8" oninput="checkPswd1()">
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        <label id="pind1"></label>
+        <br>
+        <label>Conform Password : </label>
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        <input type="password" name="paswd2" id="pswd2" minlength="8" oninput="checkPswd2()">
+        &NonBreakingSpace;
+        &NonBreakingSpace;
+        <label id="pind2"></label>
+        <br>
+        <input type="button" id="submitBtn" value="Submit Button" onclick="submitDetails()">
+
+    </form>
+    <div id="msg">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExperienceFresher</title>
+    <link rel="stylesheet" href="ExperienceFresher.css">
+    <script src="ExperienceFresher.js"></script>
+</head>
+<body>
+        <h1>Experienced and Fresher Details Form</h1>
+    <div id="div1">
+        <form name="f">
+            <div id="div2">
+            <label id="FnameLabel">First Name : </label> 
+            &NonBreakingSpace;
+            &NonBreakingSpace;
+            <input type="text" name="fname" id="Fname" placeholder="Enter Your First Name.." oninput="fnameValidation()" onchange="changeToUpper()">
+            &NonBreakingSpace;
+            &NonBreakingSpace;
+            <label id="FnameIn"></label>
+            <br>
+            </div>
+
+            <div id="div3">
+                <label id="LnameLabel">Last Name : </label> 
+                &NonBreakingSpace;
+                &NonBreakingSpace;
+                <input type="text" name="lname" id="Lname" placeholder="Enter Your Last Name.." oninput="lnameValidation()">
+                &NonBreakingSpace;
+                &NonBreakingSpace;
+                <label id="LnameIn"></label>
+                <br>
+            </div>
+
+            <div id="div4">
+                <label id="EmailLabel">Email : </label> 
+                &NonBreakingSpace;
+                &NonBreakingSpace;
+                <input type="email" name="email" id="Email" placeholder="Enter Your Email.." oninput="emailValidation()">
+                &NonBreakingSpace;
+                &NonBreakingSpace;
+                <label id="EmailIn"></label>
+                <br>
+            </div>
+
+            <div id="div5">
+                <label id="PhoneLabel">Phone Number : </label> 
+                &NonBreakingSpace;
+                &NonBreakingSpace;
+                <input type="number" name="phone" id="Phone" placeholder="Enter Your Phone Number .." oninput="mobileValidation()">
+                &NonBreakingSpace;
+                &NonBreakingSpace;
+                <label id="PhoneIn"></label>
+                <br>
+            </div>
+            
+
+            <div id="div6">
+                
+                        <input type="radio" name="rd1" id="Experience" onclick="checkCategory()">
+                        &NonBreakingSpace;
+                        &NonBreakingSpace;
+                        <label id="ExpLabel">Experience</label>
+                        &NonBreakingSpace;
+                        &NonBreakingSpace;
+                        &NonBreakingSpace;
+                        &NonBreakingSpace;
+                        <input type="radio" name="rd1" id="Fresher" onclick="checkCategory()"> 
+                        &NonBreakingSpace;
+                        &NonBreakingSpace;
+                        <label id="FreshLabel">Fresher</label>
+                        <br>
+
+            </div>
+
+
+            <div id="div7">
+                <label id="fromDateLabel">From Date : </label>
+                &NonBreakingSpace;
+                &NonBreakingSpace;
+                <input type="date" name="fdate" id="FromDate" >
+                &NonBreakingSpace;
+                &NonBreakingSpace;
+                <label id="FdateIn"></label>
+                <br>
+            </div>
+
+
+            <div id="div8">
+                <label id="toDateLabel">To Date : </label>
+                &NonBreakingSpace;
+                &NonBreakingSpace;
+                <input type="date" name="tdate" id="ToDate" >
+                &NonBreakingSpace;
+                &NonBreakingSpace;
+                <label id="TdateIn"></label>
+                <br>
+            </div>
+
+            <div id="div9">
+                <input type="button" id="btn1" onclick="checkValid()" value="Check Date"/>
+            <br>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body
+{
+    background-color:rgb(219, 164, 164);
+    text-align: center;
+    padding: 30px;
+}
+form{
+    margin-top: 30px;
+    border: 2px solid black;
+    margin-bottom: 30px;
+}
+#div1,#div2,#div3{
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 30px;
+}
+#btn1{
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: rgb(160, 153, 153);
+}
+#div4{
+    border: 2px solid black;
+    padding: 30px;
+}
+textarea{
+    width: auto;
+    height: auto;
+}

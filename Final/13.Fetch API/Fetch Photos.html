@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Photos</title>
+    <style>
+        table,th,td{
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fetch Photos</h1>
+    <table id="tb1">
+        
+    </table>
+
+
+
+
+    <script>       
+        const url = 'https://jsonplaceholder.typicode.com/photos';
+        fetch(url)
+        .then((response) =>{
+            return response.json();
+        })
+        .then((data) =>{
+           // console.log(data);
+            let photos = data;
+            let table = `<tr>
+            <th>Album ID</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>URL</th>
+            <th>ThumbnailUrl</th>
+            </tr>`;
+            for(let r of photos){
+                table += `<tr>
+                               <td>${r.albumId}</td>
+                               <td>${r.id}</td>
+                               <td>${r.title}</td>
+                               <td><img src="${r.url}" alt="this is orginal image" border="1" height="100" width="100"/></td>
+                               <td><img src="${r.thumbnailUrl}" alt="this is thumbnail" border="1" height="100" width="100"/></td>
+                         </tr>`;
+
+            }
+            document.getElementById('tb1').innerHTML = table;            
+        })
+        .catch(function(error){
+            console.log(error);
+        })
+       </script>
+
+
+
+
+
+</body>
+</html>

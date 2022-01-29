@@ -1,0 +1,29 @@
+body{
+    background-color:aquamarine;
+}
+h1{
+    text-align: center;
+}
+form{
+    text-align: center;
+    padding: 30px;
+    border: 1px solid black;
+}
+textarea{
+    border: 3px solid rgb(245, 222, 179);
+    border-radius: 2%;
+    padding-bottom: 30px;
+
+}
+#btn1{
+    margin-top: 30px;
+    display: block;
+    background-color: rgb(85, 82, 82);
+    color: white;
+}
+div{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-justify: inter-word;
+    
+}

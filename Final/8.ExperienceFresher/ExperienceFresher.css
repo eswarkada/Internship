@@ -1,0 +1,22 @@
+body{
+    background-color: dimgray;
+}
+#div1{
+    border: 2px solid black;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+    padding: 30px;
+    text-align: center;
+}
+#div2,#div3,#div4,#div5,#div6,#div7,#div8,#div9{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+h1{
+    text-align: center;
+}
+#div7,#div8,#div9{
+    visibility: hidden;
+}

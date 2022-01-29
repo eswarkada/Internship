@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Comments</title>
+    <style>
+        table,th,td{
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>fetch comments</h1>
+    <table id="tb1">
+        
+    </table>
+
+
+
+
+    <script>       
+        const url = 'https://jsonplaceholder.typicode.com/comments';
+        fetch(url)
+        .then((response) =>{
+            return response.json();
+        })
+        .then((data) =>{
+           // console.log(data);
+            let comments = data;
+            let table = `<tr>
+            <th>PostID</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Comments</th>
+            </tr>`;
+            for(let r of comments){
+                table += `<tr>
+                               <td>${r.postId}</td>
+                               <td>${r.id}</td>
+                               <td>${r.name}</td>
+                               <td>${r.email}</td>
+                               <td>${r.body}</td>
+                         </tr>`;
+
+            }
+            document.getElementById('tb1').innerHTML = table;            
+        })
+        .catch(function(error){
+            console.log(error);
+        })
+       
+
+    </script>
+</body>
+</html>
