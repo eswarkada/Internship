@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Rows</title>
+  </head>
+  <body>
+    <span id="test">Hello!!!</span><br /><br />
+
+    <div id="div1">
+      <label id="id1">From Date : </label>
+      <input type="date" name="dt1" id="frmDate" />
+      <label id="id2">To Date :</label>
+      <input type="date" name="dt2" id="toDate" />
+    </div>
+    <br />
+    <br />
+    <input
+      type="button"
+      onclick="cloneElement();"
+      value="Click Here to Clone an Element"
+    />
+    <br />
+    <br />
+
+    <div id="clones"></div>
+    <br /><br />
+  </body>
+  <script>
+    function cloneElement() {
+      const fromDateValue = document.getElementById("frmDate").value;
+      const toDateValue = document.getElementById("toDate").value;
+
+      if (fromDateValue != "" && toDateValue == "") {
+        alert("to date is empty!");
+      }
+      if (toDateValue != "" && fromDateValue == "") {
+        alert("from date is empty!");
+      }
+      if (fromDateValue != "" && toDateValue != "") {
+        if (fromDateValue >= toDateValue) {
+          alert("From Date should be less than To Date ");
+          document.getElementById("frmDate").value = "";
+          document.getElementById("toDate").value = "";
+
+          return false;
+        } else {
+          var fromLabel = document.createElement("label");
+          fromLabel.id = "cloneFrmLabel";
+          fromLabel.innerText = "From Date : ";
+          var fromDate = document.createElement("input");
+          fromDate.id = "cloneFrom";
+          fromDate.type = "date";
+          fromDate.value = fromDateValue;
+          var toLabel = document.createElement("label");
+          toLabel.id = "cloneToLabel";
+          toLabel.innerText = "To Date : ";
+          var toDate = document.createElement("input");
+          toDate.type = "date";
+          toDate.id = "cloneTo";
+          toDate.value = toDateValue;
+
+          var break1 = document.createElement("BR");
+          var clone = document.createElement("div");
+          clone.appendChild(fromLabel);
+          clone.appendChild(fromDate);
+          clone.appendChild(break1);
+          clone.appendChild(toLabel);
+          clone.appendChild(toDate);
+
+          clone.appendChild(break1);
+          clone.appendChild(break1);
+
+          document.getElementById("clones").appendChild(clone);
+          document.getElementById("frmDate").value = "";
+          document.getElementById("toDate").value = "";
+        }
+      }
+    }
+  </script>
+</html>
