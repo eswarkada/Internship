@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counting</title>
+    <script src="Counting3.js"></script>
+  </head>
+  <body>
+    <h1>Counting form</h1>
+    <form name="f">
+      <textarea
+        name="names"
+        id="t1"
+        cols="60"
+        rows="15"
+        placeholder="Enter text here..."
+      ></textarea>
+      <br />
+      <br />
+      <input type="button" value="Count All" onclick="countAll()" required />
+    </form>
+    <br />
+    <div>Count the trimspaces :</div>
+    <div id="trimcount">0</div>
+    <br />
+    <div>Count Uppercase Words :</div>
+    <div id="upcount">0</div>
+    <br />
+    <div>Count Lowercase Words :</div>
+    <div id="locount">0</div>
+    <br />
+    <div>Count Combined Words :</div>
+    <div id="cbcount">0</div>
+    <br />
+    <div>First Occurrence :</div>
+    <div id="focc">0</div>
+    <br />
+    <div>Last Occurrence :</div>
+    <div id="locc">0</div>
+    <br />
+  </body>
+</html>
